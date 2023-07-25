@@ -460,13 +460,27 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
 
     <a href="#" class="float-right mb-3 mr-3">Torna su</a>
     <script>
-         automticamente.
-        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
+         
+        
         
         window.onload = function() {
         // EXTRA Crea con JavaScript la funzionalità per rimuovere il link "twitter" sotto alla sezione "Altro" nell'elemento "aside". Deve avvenire al caricamento della pagina,    
         const TwitterButton = document.querySelector("aside div:nth-of-type(3) li:nth-of-type(2)")
         TwitterButton.remove()
+
+
+        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
+        for (let anchor of document.querySelectorAll(".stretched-link, .font-weight-bold")){
+            anchor.addEventListener("click", function click(event){
+
+                //anchor.parentElement.remove()
+
+                //oppure
+               // anchor.closest(".col-md-6").remove()
+            })
+
+        }
+
 
 
         // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
@@ -477,9 +491,15 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
                 author.addEventListener("mouseover", function hover(event){
                     alert(event.target.innerText)
                 })
+
+               
+
             }
             
-        }
+           }
+
+
+
     </script>
 </body>
 
