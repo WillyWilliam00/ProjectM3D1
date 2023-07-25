@@ -473,7 +473,7 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
         for (let anchor of document.querySelectorAll(".stretched-link, .font-weight-bold")){
             anchor.addEventListener("click", function click(event){
 
-                //anchor.parentElement.remove()
+                anchor.parentElement.remove()
 
                 //oppure
                // anchor.closest(".col-md-6").remove()
